@@ -1,0 +1,72 @@
+header
+    margin-top: 0
+    background-color: #E52600
+    text-align: center
+
+    position: fixed
+    width: 100%
+    z-index: 99999
+
+    padding:
+        top: 10px
+        bottom: 10px
+        left: 0
+        right: 0
+    nav
+        display: flex
+        justify-content: center
+        ul
+            width: 30%
+            padding-left: 0
+            margin: 0
+            display: flex
+            justify-content: center
+            align-items: center
+            li
+                list-style: none
+                text-transform: uppercase
+                color: white
+                margin: 0 2vw
+                a
+                    &:hover
+                        color: red
+                        -webkit-text-stroke: 1px #FFFFFF
+        h1
+            margin: 0
+            width: 40%
+            color: white
+            font-family: 'Staatliches', cursive
+            text-align: center
+
+#open-mobile-menu
+    position: absolute
+    right: 20px
+    top: 14px
+    display: none
+#close-mobile-menu
+    position: absolute
+    right: 10px
+    top: 14px
+    display: none
+.mobile-menu
+    display: none
+    position: absolute
+    height: 100vh
+    z-index: 99998
+    width: 100vw
+    background: red
+    top: 0
+    ul
+        color: white
+        z-index: 99999
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        margin: 0
+        padding: 0
+
+        li
+            list-style: none
+            font-size: 30px
+            line-height: 2
