@@ -17,6 +17,6 @@ def hh_parse(base_url, headers):
             print(title)
             print(href)
     else:
-        print("JOPA")
+        print("NEOK")
 
 hh_parse(base_url, headers)
