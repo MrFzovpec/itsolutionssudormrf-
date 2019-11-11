@@ -13,6 +13,7 @@ base_url = 'https://olimpiada.ru/activities'
 def ol_parse(base_url, headers):
     session = requests.Session()
     request = session.get(base_url,headers=headers)
+    full = []
     #делаем запрос
     if request.status_code == 200:
         soup = bs(request.content, 'html.parser')
@@ -22,6 +23,8 @@ def ol_parse(base_url, headers):
         for div in divs_2:
             date = div.find('span', attrs={'class': 'tl_cont_s'}).text
             print(date)
+
+
         #достаем ссылку название рейтинг и класс
         for div in divs:
 
@@ -30,10 +33,14 @@ def ol_parse(base_url, headers):
             classes = div.find('span', attrs={'class': 'classes_dop'}).text
             rait = div.find('span', attrs={'class': 'pl_rating'}).text
 
-            print(title)
-            print("https://olimpiada.ru"+href)
-            print(classes)
-            print(rait)
+            full.append({
+            'title': title,
+            'href': "https://olimpiada.ru"+href,
+            'classes': classes,
+            'rait': rait
+            })
+        for i in range(0,len(full)):
+            print(full[i])
     #если не подключились
     else:
         print("NEOK")
