@@ -1,7 +1,7 @@
 #импорт библиотек
 import requests
 from bs4 import BeautifulSoup as bs
-
+import csv
 
 headers = {'accept': '*/*',
                 'user-agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.70 Safari/537.36'}
@@ -16,13 +16,16 @@ def ol_parse(base_url, headers):
     full = []
     #делаем запрос
     if request.status_code == 200:
-        soup = bs(request.content, 'html.parser')
+        soup = bs(request.content, 'lxml')
         divs_2 = soup.find_all('div', attrs={'class': 'tl_event long'})
         divs = soup.find_all('div', attrs={'class': 'fav_olimp olimpiada'})
         #достаем дату
         for div in divs_2:
             date = div.find('span', attrs={'class': 'tl_cont_s'}).text
             print(date)
+            full.append({
+            'date': date
+            })
 
 
         #достаем ссылку название рейтинг и класс
@@ -44,6 +47,16 @@ def ol_parse(base_url, headers):
     #если не подключились
     else:
         print("NEOK")
+    return full
+
+def file_writer(full):
+    with open('olymp.csv', 'a') as file:
+        a_pen = csv.writer(file)
+        a_pen.writerow(('Название олимпиады', 'ссылка', 'класс', 'Рейтинг', 'Дата'))
+        for ful in full:
+            a_pen.writerow((full['title'], full['href'], full['classes'], full['rait'], full['date']))
+
 
 #вызываем функцию
-ol_parse(base_url, headers)
+full =  ol_parse(base_url, headers)
+file_writer(full)
