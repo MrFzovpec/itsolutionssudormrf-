@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="">
@@ -12,15 +13,173 @@
 	<!-- Template Basic Images End -->
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
 	<link rel="stylesheet" href="css/main.min.css">
 	<title>OlympForAll</title>
 </head>
+
 <body>
 	<header>
+		<img class="logo" src="img/logo.png" alt="">
+		<div class="points">
+			<form>
+				<input type="text" class="search">
+				<input type="submit" name="" id="search_submit" value="">
+				<label for="search_submit">
+					<img src="img/search.png" alt="">
+				</label>
+			</form>
+			<a href="">
+				<img src="img/login.png" alt="">
+			</a>
+		</div>
 
 	</header>
+	<section class="container-fluid main-content">
+
+		<div class="row">
+			<div class="col-md-3 filters">
+				<form action="">
+					<h2>Фильтры</h2>
+
+
+					<h4>Класс</h4>
+					<div class="filters__points">
+						<span>
+							<input type="radio" name="class" value="">
+							<label for="">1-4</label>
+						</span><br>
+						<span>
+							<input type="radio" name="class" value="">
+							<label for="">5-8</label>
+						</span><br>
+						<span>
+							<input type="radio" name="class" value="">
+							<label for="">9-11</label>
+						</span>
+					</div>
+					<h4>Предмет</h4>
+					<div class="filters__points">
+
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Математика</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Английский язык</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Информатика</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Русский язык</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Право</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Экономика</label>
+						</span><br>
+					</div>
+
+					<h4>Тип</h4>
+					<div class="filters__points">
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Олимпиада</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Хакатон</label>
+						</span><br>
+						<span>
+							<input type="radio" name="subject" value="">
+							<label for="">Митап</label>
+						</span><br>
+					</div>
+					<button type="submit" name="button">ПРИМЕНИТЬ</button>
+				</form>
+			</div>
+			<div class="col-md-9 olympyads">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="card">
+							<div class="card__image">
+								<img src="img/vosh.png" alt="">
+							</div>
+							<h6 class="card__heading">Название олимпиады</h6>
+							<p class="card__description">Вмысауачсцеямаеццеасияияцвиасвциаясиясвеувсеуаясииасасасчяиеакутфгецыып квыеквкекыккеккцвыекцкеывкфеаыеаыеаыаеакекввваечаыечаечкекцачекцчеккеычвеквчевкевеквяагныеаеацекцчевчекыакаыа</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<footer>
+		
+	</footer>
 
 </body>
+
 </html>
